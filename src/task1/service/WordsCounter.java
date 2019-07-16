@@ -10,7 +10,7 @@ public class WordsCounter {
         Map<String, Long> words = new HashMap<>();
         Long counter;
 
-        Pattern pattern = Pattern.compile("[\\wА-Яа-я]+(\\-[\\wА-Яа-я]+)?");
+        Pattern pattern = Pattern.compile("[\\wА-Яа-я]+((\\-|\\')[\\wА-Яа-я]+)*");
         Matcher matcher = pattern.matcher(text);
 
         while (matcher.find()) {
