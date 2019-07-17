@@ -8,19 +8,18 @@ import java.util.regex.Pattern;
 public class WordsCounter {
     public static Map<String, Long> countTheWords(String text) {
         Map<String, Long> words = new HashMap<>();
-        Long counter;
+        Long counter = 1L;
 
         Pattern pattern = Pattern.compile("[\\wА-Яа-я]+((\\-|\\')[\\wА-Яа-я]+)*");
         Matcher matcher = pattern.matcher(text);
 
         while (matcher.find()) {
-            String tempString = text.substring(matcher.start(), matcher.end());
-            counter = 1L;
+            String word = text.substring(matcher.start(), matcher.end());
 
-            if (!words.containsKey(tempString)) {
-                words.put(tempString, counter);
+            if (!words.containsKey(word)) {
+                words.put(word, counter);
             } else {
-                words.put(tempString, words.get(tempString) + 1L);
+                words.put(word, words.get(word) + 1L);
             }
         }
 
