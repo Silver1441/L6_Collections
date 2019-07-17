@@ -1,4 +1,4 @@
-package task1.template;
+package template;
 
 public class TextHolder {
     public static String text = "When I first heard his name, I said, just as you are going to say, " +
