@@ -7,8 +7,6 @@ public class DemoOutput {
         words.entrySet().stream()
                 .forEach(word -> System.out.println("\"" + word.getKey() + "\"" +
                         "  - times in text: " + word.getValue()));
-
-        System.out.println();
-        System.out.println("Total unique words count:  " + words.size());
+        System.out.println("\nTotal unique words count:  " + words.size());
     }
 }
