@@ -8,8 +8,8 @@ import java.util.regex.Pattern;
 public class MatcherGroupIterator implements Spliterator<String> {
     private final Matcher matcher;
 
-    public MatcherGroupIterator(Pattern p, String s) {
-        matcher = p.matcher(s);
+    public MatcherGroupIterator(Pattern pattern, String text) {
+        matcher = pattern.matcher(text);
     }
 
     @Override
