@@ -9,7 +9,7 @@ import java.util.stream.Collectors;
 import static template.Patterns.*;
 
 public class WordsCounter {
-    public static Map<String, Long> countTheWords(String text) {
+    public Map<String, Long> countTheWords(String text) {
         Map<String, Long> words = new HashMap<>();
         Long counter = 1L;
 
@@ -31,7 +31,6 @@ public class WordsCounter {
                 .collect(Collectors.toMap(
                         word -> word.getKey().toLowerCase(),
                         word -> word.getValue(),
-                        (oldValue, newValue) -> newValue
-                ));
+                        (oldValue, newValue) -> newValue));
     }
 }

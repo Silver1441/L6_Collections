@@ -1,8 +1,6 @@
 package task2.service;
 
 
-import service.MatcherGroupIterator;
-
 import java.util.*;
 import java.util.regex.Pattern;
 import java.util.stream.Collectors;

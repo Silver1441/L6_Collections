@@ -1,6 +1,7 @@
 package task1;
 
-import static task1.service.WordsCounter.countTheWords;
+import task1.service.WordsCounter;
+
 import static task1.service.DemoOutput.showOutput;
 import static template.TextHolder.*;
 
@@ -10,6 +11,7 @@ import static template.TextHolder.*;
 
 public class WordsCounterMain {
     public static void main(String[] args) {
-        showOutput(countTheWords(text));
+        WordsCounter counter = new WordsCounter();
+        showOutput(counter.countTheWords(text));
     }
 }

@@ -1,4 +1,4 @@
-package service;
+package task2.service;
 
 import java.util.Spliterator;
 import java.util.function.Consumer;
